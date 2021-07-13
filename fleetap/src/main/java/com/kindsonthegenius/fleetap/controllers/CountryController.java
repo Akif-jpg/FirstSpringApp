@@ -1,12 +1,16 @@
 package com.kindsonthegenius.fleetap.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kindsonthegenius.fleetap.models.Country;
 import com.kindsonthegenius.fleetap.services.CountryService;
@@ -27,5 +31,18 @@ public class CountryController {
 	public String addNew(Country country) {
 		countryService.save(country);
 		return "redirect:/countries";
+	}	
+	
+	@RequestMapping(value="countries/update", method = {RequestMethod.PUT, RequestMethod.GET})
+	public String update(Country country) {
+		countryService.save(country);
+		return "redirect:/countries";
+	}
+	
+	@RequestMapping("countries/findById") 
+	@ResponseBody
+	public Optional<Country> findById(int id)
+	{
+		return countryService.findById(id);
 	}
 }
