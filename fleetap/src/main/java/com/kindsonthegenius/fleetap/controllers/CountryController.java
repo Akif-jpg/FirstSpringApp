@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kindsonthegenius.fleetap.models.Country;
@@ -33,16 +34,22 @@ public class CountryController {
 		return "redirect:/countries";
 	}	
 	
-	@RequestMapping(value="countries/update", method = {RequestMethod.PUT, RequestMethod.GET})
+	@RequestMapping(value="/countries/update", method = {RequestMethod.PUT, RequestMethod.GET})
 	public String update(Country country) {
 		countryService.save(country);
 		return "redirect:/countries";
 	}
 	
-	@RequestMapping("countries/findById") 
+	@RequestMapping("/countries/findById") 
 	@ResponseBody
 	public Optional<Country> findById(int id)
 	{
 		return countryService.findById(id);
+	}
+	
+	@RequestMapping(value = "/countries/delete", method = {RequestMethod.DELETE , RequestMethod.GET})
+	public String delete(Integer id) {
+		countryService.delete(id);
+		return "redirect:/countries";
 	}
 }
