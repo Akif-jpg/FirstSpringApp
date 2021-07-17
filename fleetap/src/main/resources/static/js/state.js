@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 $('document').ready(function() {
 	
 	$('.table #editButton').on('click',function(event){		
@@ -6,7 +10,7 @@ $('document').ready(function() {
 		$.get(href, function(state, status){
 			$('#idEdit').val(state.id);
 			$('#ddlCountryEdit').val(state.countryid);
-			$('#capitalEdit').val(state.capital);
+			$('#capitalEdit').val(state.capipal);
 			$('#codeEdit').val(state.code);
 			$('#nameEdit').val(state.name);
 			$('#detailsEdit').val(state.details);
