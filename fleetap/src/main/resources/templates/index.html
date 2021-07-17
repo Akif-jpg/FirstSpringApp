@@ -272,9 +272,9 @@
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" th:src="@{'/img/photos/' + ${#authentication.getPrincipal().getUsername()} + '.jpg'}" height="38" width="38">
+                                <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username" th:text="${#authentication.getPrincipal().getUsername()}">Guest</span>
+                            <span class="username">Jenifer Smith</span>
                             <b class="caret"></b>
                         </a>
             <ul class="dropdown-menu extended logout">
@@ -343,7 +343,7 @@
               <li><a class="" th:href="@{/vehicleMakes}">Vehicle Make</a></li>
               <li><a class="" th:href="@{/vehicleTypes}">Vehicle Types</a></li>
               <li><a class="" th:href="@{/vehicleModels}">Vehicle Models</a></li>
-              <li><a class="" th:href="@{/vehicleStatuses}">Status Values</a></li>
+              <li><a class="" th:href="@{/statusValues}">Status Values</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -354,10 +354,10 @@
                       </a>
             <ul class="sub">
               <li><a class="" th:href="@{/employees}">Employees</a></li>
-              <li><a class="" th:href="@{/clients}">Clients</a></li>
+              <li><a class=""th:href="@{/clients}">Clients</a></li>
               <li><a class="" th:href="@{/suppliers}">Suppliers</a></li>
               <li><a class="" th:href="@{/contacts}">Contacts</a></li>
-              <li><a class="" th:href="@{/users}">User</a></li>
+              <li><a class="" th:href="@{/users}">Users</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -368,7 +368,7 @@
                       </a>
             <ul class="sub">
               <li><a class="" th:href="@{/jobTitles}">Job Titles</a></li>
-              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>
+              <li><a class="" th:href="@{/employeeTypes}">Employee Types</a></li>              
             </ul>
           </li>
 
@@ -380,7 +380,7 @@
                       </a>
             <ul class="sub">
               <li><a class="" th:href="@{/invoices}">Invoices</a></li>
-              <li><a class="" th:href="@{/invoicestatuses}">Invoice Status Values</a></li>
+              <li><a class="" th:href="@{/invoiceStatuses}">Invoice Status Values</a></li>              
             </ul>
           </li>
 
@@ -394,8 +394,7 @@
               <li><a class="" th:href="@{/countries}">Countries</a></li>
               <li><a class="" th:href="@{/states}"><span>States</span></a></li>
               <li><a class="" th:href="@{/locations}"><span>Locations</span></a></li>
-
-            </ul>
+             </ul>
           </li>
 
         </ul>
@@ -403,7 +402,6 @@
       </div>
     </aside>
     <!--sidebar end-->
-    
 
     <!--main content start-->
     <section id="main-content">
@@ -469,11 +467,11 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-
+                
               </div>
-			<div >
-			    <div style="background-image: url('img/bg-11.jpg'); background-size:100% 100%; height:400px;"></div>
-			</div>
+            <div >
+    <div style="background-image: url('img/bg-11.jpg'); background-size:100% 100%; height:400px;"></div>
+</div>
 
             </div>
           </div>
