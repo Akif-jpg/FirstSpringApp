@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.kindsonthegenius.fleetap.models.Country;
 
-
 @Repository
 public interface CountryRepository extends JpaRepository<Country,Integer> {
 
